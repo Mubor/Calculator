@@ -83,3 +83,8 @@ li {
     font-size: 18px;
 
 }
+
+.error {
+    border: 2px solid red;
+}
+

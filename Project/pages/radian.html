@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/calculate.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/convertor.js"></script>
+    <script src="../js/UI.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -19,13 +20,13 @@
         </div>
         <div class="main">
             <div class="container df">
-                <input type="text"  id="name" name="name" value="" placeholder="Введите ваше имя">
+                <input type="text"  id="name" name="name" value="" placeholder="Введите ваше имя" onkeyup="checkString(this)">
                 <div class="options df">
                     <input type="radio" name="options" id="radian-to-angle" onclick="changePlaceholder()" checked> Радианы в угол
                     <input type="radio" name="options" id="angle-to-radian" onclick="changePlaceholder()"> Угол в радианы
                 </div>
-                <input type="text" id="number" name="number" value="" placeholder="Введите радианы">
-                <button class="button" id="button" onclick="translateValue()">Посчитать</button>
+                <input type="text" id="number" name="number" value="" placeholder="Введите радианы" onkeyup="checkNumber(this)">
+                <button class="button" id="button" onclick="convert()">Посчитать</button>
                 <div class="text" id="result"></div>
             </div>
         </div>
