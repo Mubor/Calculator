@@ -7,7 +7,16 @@ function getElem(id) {
     return document.getElementById(id);
 }
 
-function createResultString(result) {
-    debugger;
-    return `${getValue("name")}, результат заданой тобой операции : ${result}`;
+function isCorrect(elem) {
+    if (elem.className != "error"){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function displayResult(name, number) {
+    let textHTML = `${name}, результат заданой тобой операции : ${number}`;
+    getElem("result").innerHTML = textHTML;
 }

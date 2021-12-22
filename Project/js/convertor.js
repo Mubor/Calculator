@@ -7,8 +7,12 @@ function getRadioObj(){
 }
 //translation values
 function convert() {
-    if(getElem("name").className != "error" && getElem("number").className != "error"){
-        getElem("result").innerHTML = createResultString(getResult(getValue("number"), getRadioObj()));
+    let isNameCorrect = isCorrect(getElem("name"));
+    let isNumCorrect = isCorrect(getElem("number"));
+
+    if(isNameCorrect && isNumCorrect){
+        let resultNum = getResult(getValue("number"), getRadioObj());
+        displayResult(getValue("name"), resultNum);
     }
 }
 

@@ -1,8 +1,14 @@
 
 //finding element values and calculating (for calculator page)
 function calculate() {
-    if(getElem("name").className != "error" && getElem("first-num").className != "error" && getElem("last-num").className != "error" && getElem("operation").className != "error") {
-        document.getElementById("result").innerHTML = createResultString(getOperationResult(getValue("first-num"), getValue("last-num"), getValue("operation")));
+    let isNameCorrect = isCorrect(getElem("name"));
+    let isFirstCorrect = isCorrect(getElem("first-num"));
+    let isOperCorrect = isCorrect(getElem("operation"));
+    let isLastCorrect = isCorrect(getElem("last-num"));
+    
+    if(isNameCorrect && isFirstCorrect && isOperCorrect && isLastCorrect) {
+        let resultNum = getOperationResult(getValue("first-num"), getValue("last-num"), getValue("operation"));
+        displayResult(getValue("name"), resultNum);
     }
 }
 

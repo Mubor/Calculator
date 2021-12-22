@@ -1,7 +1,6 @@
 //change placeholder string, when the mode(radio-button) have changed
 function changePlaceholder () {
-    let mode = getRadioObj();
-    let inputString = document.getElementById("number");
+    let inputString = getElem("number");
 
     if(getRadioObj().radian.checked) {
         inputString.setAttribute("placeholder", "Введите радианы");
@@ -13,7 +12,6 @@ function changePlaceholder () {
 
 // checking string input
 function checkString(field) {
-    debugger;
     if (field.value == "" || !isNaN(field.value)) {
         changeFieldWithMistake(field)
     }
