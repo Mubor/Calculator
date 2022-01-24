@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "This project serves to perform some math operations (+ - * / ^) and to convert values ​​from radians to degrees and on the contrary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mubor/Calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mubor/Calculator/issues"
+  },
+  "homepage": "https://github.com/Mubor/Calculator#readme"
+}
