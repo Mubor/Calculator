@@ -1,22 +1,20 @@
-
 function getValue(id) {
-    return document.getElementById(id).value;
+  return document.getElementById(id).value;
 }
 
 function getElem(id) {
-    return document.getElementById(id);
+  return document.getElementById(id);
 }
 
 function isCorrect(elem) {
-    if (elem.className != "error"){
-        return true;
-    }
-    else {
-        return false;
-    }
+  if (elem.className != 'error') {
+    return true;
+  }
+
+  return false;
 }
 
 function displayResult(name, number) {
-    let textHTML = `${name}, результат заданой тобой операции : ${number}`;
-    getElem("result").innerHTML = textHTML;
+  const textHTML = `${name}, результат заданой тобой операции : ${number}`;
+  getElem('result').innerHTML = textHTML;
 }
