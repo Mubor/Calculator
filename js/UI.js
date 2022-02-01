@@ -11,7 +11,7 @@ function changePlaceholder() {
 
 // checking string input
 function checkString(field) {
-  if (field.value == '' || !isNaN(field.value)) {
+  if (field.value === '' || !isNaN(field.value)) {
     changeFieldWithMistake(field);
   } else {
     changeFieldWithoutMistake(field);
@@ -20,7 +20,7 @@ function checkString(field) {
 
 // checking number input
 function checkNumber(field) {
-  if (field.value == '' || isNaN(field.value)) {
+  if (field.value === '' || isNaN(field.value)) {
     changeFieldWithMistake(field);
   } else {
     changeFieldWithoutMistake(field);
@@ -29,7 +29,7 @@ function checkNumber(field) {
 
 // check operation input
 function checkOperation(field) {
-  if (field.value != '+' && field.value != '-' && field.value != '*' && field.value != '/' && field.value != '^') {
+  if (field.value !== '+' && field.value !== '-' && field.value !== '*' && field.value !== '/' && field.value !== '^') {
     changeFieldWithMistake(field);
   } else {
     changeFieldWithoutMistake(field);
