@@ -6,28 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
-    <script src="js/UI.js"></script>
-    <script src="js/calculator.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
-            <ul class="nav df">
-                <li class="nav__item"><a href="#" class="nav__link nav__link--curr">Калькулятор</a></li>
-                <li class="nav__item"><a href="pages/radian.html" class="nav__link">Перевод из радианов в угол</a></li>
-            </ul>
-        </div>
         <div class="main">
             <div class="container df">
-                <input type="text" id="name" name="name" value="" placeholder="Введите ваше имя" onkeyup="checkString(this)">
-                <input type="text" id="first-num" name="first-num" value="" placeholder="Введите первый операнд" onkeyup="checkNumber(this)">
-                <input type="text" id="operation" name="operation" value="" placeholder="Введите операцию (+, -, *, /, ^)" onkeyup="checkOperation(this)">
-                <input type="text" id="last-num" name="last-num" value="" placeholder="Введите втророй операнд" onkeyup="checkNumber(this)">
-                <button class="button" id="button" onclick="calculate()">Посчитать</button>
+                <input type="text" id="name" name="name" value="" placeholder="Введите ваше имя">
+                <input type="text" id="first-num" name="first-num" value="" placeholder="Введите первый операнд">
+                <input type="text" id="operation" name="operation" value="" placeholder="Введите операцию (+, -, *, /, ^)">
+                <input type="text" id="last-num" name="last-num" value="" placeholder="Введите втророй операнд">
+                <button class="button" id="button">Посчитать</button>
                 <div class="text" id="result"></div>
             </div>
         </div>
     </div>
+    <script src="dist/main.js"></script>
 </body>
 </html>
