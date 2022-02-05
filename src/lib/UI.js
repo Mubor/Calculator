@@ -1,12 +1,13 @@
-// change placeholder string, when the mode(radio-button) have changed
-function changePlaceholder() {
-  const inputString = getElem('number');
+// change style of wrong input
+function changeFieldWithMistake(field) {
+  field.className = 'error';
+  field.setAttribute('title', 'Не правильное значение!');
+}
 
-  if (getRadioObj().radian.checked) {
-    inputString.setAttribute('placeholder', 'Введите радианы');
-  } else {
-    inputString.setAttribute('placeholder', 'Введите угол');
-  }
+// change style of correct input
+function changeFieldWithoutMistake(field) {
+  field.className = '';
+  field.setAttribute('title', '');
 }
 
 // checking string input
@@ -36,14 +37,8 @@ function checkOperation(field) {
   }
 }
 
-// change style of wrong input
-function changeFieldWithMistake(field) {
-  field.className = 'error';
-  field.setAttribute('title', 'Не правильное значение!');
-}
-
-// change style of correct input
-function changeFieldWithoutMistake(field) {
-  field.className = '';
-  field.setAttribute('title', '');
-}
+export default {
+  checkString,
+  checkNumber,
+  checkOperation,
+};

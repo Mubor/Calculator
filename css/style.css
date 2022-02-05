@@ -21,10 +21,6 @@ li {
     background-color: rgb(190, 138, 190);
 }
 
-.header {
-    padding: 2%;
-}
-
 .nav {
     justify-content: space-around;
     margin: 0 auto;
@@ -39,10 +35,6 @@ li {
 
 .nav__link:hover, .nav__link--curr {
     font-weight: bold;
-}
-
-.main {
-    margin-top: 5%;
 }
 
 .container {
