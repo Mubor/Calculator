@@ -13,8 +13,9 @@ function calculate() {
   const isLastCorrect = isCorrect(getElem('last-num'));
 
   if (isNameCorrect && isFirstCorrect && isOperCorrect && isLastCorrect) {
-    const resultNum = getOperationResult(getValue('first-num'), getValue('last-num'), getValue('operation'));
-    displayResult(getValue('name'), resultNum);
+    const resultNum = getOperationResult({ firstNum: getValue('first-num'), lastNum: getValue('last-num'), operation: getValue('operation') });
+
+    displayResult({ name: getValue('name'), number: resultNum });
   }
 }
 

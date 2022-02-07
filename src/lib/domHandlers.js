@@ -6,7 +6,7 @@ function getValue(id) {
   return document.getElementById(id).value;
 }
 
-function displayResult(name, number) {
+function displayResult({ name, number }) {
   const textHTML = `${name}, результат заданой тобой операции : ${number}`;
   getElem('result').innerHTML = textHTML;
 }
